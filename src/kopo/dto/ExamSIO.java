@@ -1,19 +1,19 @@
-package kopo.domain;
+package kopo.dto;
 
-public class ExamRIO {
+public class ExamSIO {
 	
 	//다룰 데이터 선언
-	private String name;
-	private int studentid;
-	private int kor;
-	private int eng;
-	private int mat;
+	private String name;	//이름
+	private int studentid;	//학번
+	private int kor;		//국어
+	private int eng;		//영어
+	private int mat;		//수학
 	
 	//constructor 선언 빈 생성자와 데이터가 같이 들어있는 생성자를 같이 만들어 준다.
-	public ExamRIO() {
+	public ExamSIO() {
 		super();
 	}
-	public ExamRIO(String name, int studentid, int kor, int eng, int mat) {
+	public ExamSIO(String name, int studentid, int kor, int eng, int mat) {
 		super();
 		this.name = name;
 		this.studentid = studentid;
@@ -21,7 +21,6 @@ public class ExamRIO {
 		this.eng = eng;
 		this.mat = mat;
 	}
-	
 	
 	//getter, setter 메소드 생성 : 데이터를 불러오고 적용할 때 사용한다. 
 	public String getName() {
@@ -54,10 +53,5 @@ public class ExamRIO {
 	public void setMat(int mat) {
 		this.mat = mat;
 	}
-	
-	
-	
-	
-	
 
 }

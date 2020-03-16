@@ -2,14 +2,10 @@
 <html>
 <head>
 <title>Insert title here</title>
-<!-- 프레임으로 화면을 2개로 나눔 -->
-<frameset cols="130,*" border="0" frameborder="1">
-	<!-- 메뉴가 나오는 부분 -->
-	<frame src="menu.html">
-	<!-- 실제 내용이 나오는 부분 name을 main으로 해줘서 메뉴와 연동되게 할 것이다. -->
-	<frame src="#" name="main">
-</frameset>
 </head>
 <body>
+	<!-- iframe을 2개 만들어서 한쪽은 메뉴가 나오는 곳, 한쪽은 내용이 나오는 곳으로 설정한다. (name을 main으로 설정해서 표시될 위치로 삼는다.) -->
+	<iframe src="menu.html" height="800px" width="200px">link_menu</iframe>
+	<iframe src="intro.jsp" height="800px" width="70%" name="main">link_intro</iframe>
 </body>
 </html>

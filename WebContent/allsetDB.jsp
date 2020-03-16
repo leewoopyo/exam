@@ -1,31 +1,20 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ page import="java.sql.*, javax.sql.*, java.io.*"%>
-<%@ page import="kopo.dao.*,kopo.domain.*" %>
+<%@ page import="kopo.dao.*,kopo.domain.*,kopo.dto.*,kopo.service.*" %>
 <html>
 <head>
-<title>Insert title here</title>
+<title>데이터 insert</title>
 </head>
 <body>
-<h3>테이블 값 넣기</h3>
+<h3>데이터 insert</h3>
+<hr>
 <%
-//ExamRIO클래스와 ExamRepo클래스를 사용하려면 해당 클래스를 임포트 해야한다.
-//ExamRepo클래스에 있는 insert메소드를 불러온다 매개변수로 ExamRIO형의 데이터를 넣고 
-//ExamRIO클래스 에서 선언한 생성자에 맞게 객체를 선언한다.
-try{
-	ExamRepo.insert(new ExamRIO("학생1",209901,95,100,95));
-	ExamRepo.insert(new ExamRIO("학생2",209902,90,90,100));
-	ExamRepo.insert(new ExamRIO("학생3",209903,85,80,95));
-	ExamRepo.insert(new ExamRIO("학생4",209904,75,100,85));
-	ExamRepo.insert(new ExamRIO("학생5",209905,85,70,75));
-	ExamRepo.insert(new ExamRIO("학생6",209906,95,80,95));
-	ExamRepo.insert(new ExamRIO("학생7",209907,85,100,85));
-	ExamRepo.insert(new ExamRIO("학생8",209908,75,90,65));
-	ExamRepo.insert(new ExamRIO("학생9",209909,85,80,95));
-}catch(Exception e){
-	out.print("테이블 생성 중 에러 발생" + e);
-}
-
+	//ExamServiceImpl객체 생성한다. 해당 객체는 ExamService형으로 담음
+	ExamService examService = new ExamServiceImpl(); 
+	//해당 객체에 있는 allsetDB메소드를 실행한다.(데이터 삽입)
+	examService.allsetDB();
 %>
+
 
 </body>
 </html>
