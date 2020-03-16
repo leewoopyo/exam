@@ -46,6 +46,7 @@ try{
 			<td width=50><p align=center><%=Integer.toString(exams.get(i).getMat())%></p></td>
 		</tr>
 	<%}
+//예외처리
 }catch(Exception e){ 
 	out.print("테이블 생성 에러 발생" + e);
 } 

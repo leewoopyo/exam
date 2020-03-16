@@ -14,7 +14,5 @@
 	//해당 객체에 있는 allsetDB메소드를 실행한다.(데이터 삽입)
 	examService.allsetDB();
 %>
-
-
 </body>
 </html>

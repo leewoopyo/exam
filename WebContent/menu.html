@@ -5,20 +5,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<script>
-</script>
-	<!-- 메뉴가 표시되는 곳이다. a 링크 태그를 만들어서 링크를 걸고 화면이 표시될 곳인 main에 target 설정을 해 준다. -->
-	<form method="get">
-	<a href="./createDB.jsp" target="main">*TBL 생성</a><br>
-	<a href="./dropDB.jsp" target="main">*TBL 삭제</a><br>
-	<a href="./AllsetDB.jsp" target="main">*TBL 값넣기</a><br>
-	<!-- 전체 조회로 이동할 경우 from 파마미터를 0으로 준 이유는, 페이지 네이션 작성 시 첫 페이지 표시하기 위함이다. -->
-	<a href="AllviewDB.jsp" target="main">*TBL 전체조회</a><br><br>
-	
-<!-- 	<a href="./inputform1.html" target="main">*추가</a><br>
-	<a href="./inputform2.html" target="main">*정정/삭제</a><br>
-	
-	<a href="./dummytest.jsp" target="main">*더미 테스트</a><br> -->
-	</form>
+    <!-- a태그로 각 기능을 가진 페이지에 링크를 만들고  -->
+    <!-- target으로 화면에 출력할 곳을 설정한다. 타겟이 main이라서 main이란 이름의 프레임에 출력될것이다. -->
+    <a href="createDB.jsp" target="main">테이블 생성</a><br>
+    <a href="dropDB.jsp" target="main">테이블 삭제</a><br>
+    <a href="allsetDB.jsp" target="main">데이터 생성</a><br>
+    <a href="allviewDB.jsp" target="main">전체 데이터</a><br>
 </body>
 </html>

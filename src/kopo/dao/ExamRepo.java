@@ -12,8 +12,6 @@ import kopo.domain.ExamRIO;
 
 public class ExamRepo {
 	
-	//PreparedStatement pstmt = null;
-	//ResultSet rset = null;
 	
 	/**
 	 * DB연결하는 메소드(따로 연결하는 메소드를 만들어서 연결시마다 해당 메소드를 불러오게 한다. 
@@ -33,17 +31,6 @@ public class ExamRepo {
 		}
 		return conn;
 	}
-	
-	
-	/**
-	 * DB연결 끊는 메소드
-	 */
-	/*
-	 * public void connectionClose() { try { if(rset != null) {rset.close();}
-	 * if(stmt != null) {stmt.close();} if(conn != null) {conn.close();}
-	 * }catch(Exception e) { e.printStackTrace(); } }
-	 */
-	
 	
 	/**
 	 * DB데이블을 생성하는 메소드
