@@ -48,33 +48,5 @@ try{
 } 
 %>
 </table>
-
-
-
-
-	
-	<!-- 페이지네이션 하는 부분  -->
-	<!-- << 1 2 3 4 5 6 7 8 9 10 >> -->
-	<!-- from은 각 페이지에서 데이터가 시작하는 부분이다. -->
-	<!-- 페이지 군이 1페이지군이면 (1~10) '<'가 동작하지 않는다. -->
-<%-- 	<%if(from >= (10*cnt)){ %>
-	<a href='AllviewDB.jsp?from=<%=(from-(10*cnt))-(from%(10*cnt))%>'><<</a>
-	<%}else {%><a><<</a><%}%>
-	<!-- 마지막 페이지 영역일때의 처리 -->
-	<%if(from >= maxcount-(maxcount%(10*cnt))){ %>
-	<%for(int i = 1 + pagebar; i <=10 + pagebar-(10-Math.ceil((double)maxcount%(10*cnt)/cnt)); i++){ %>
-	<a href='AllviewDB.jsp?from=<%=(i-1)*cnt%>'><%=i%></a>
-	<%}%>
-	<!-- 그외의 페이지 영역일때의 처리 -->
-	<%}else{%>
-	<%for(int i = 1 + pagebar; i <=10 + pagebar; i++){ %>
-	<a href='AllviewDB.jsp?from=<%=(i-1)*cnt%>'><%=i%></a>
-	<%}%>
-	<%}%>
-	<!-- 만약 마지막페이지군이면 '>'가 동작하지 않는다. -->
-	<%if(from < maxcount-(maxcount%(10*cnt))){ %>
-	<a href='AllviewDB.jsp?from=<%=(from+(10*cnt))-(from%(10*cnt))%>'>&nbsp;>></a> 
-	<%}else{ %><a>>>&nbsp;</a><%}%> --%>
-	
 </body>
 </html>
